@@ -41,10 +41,10 @@ function getPromise(number) {
  */
 function getPromiseResult(source) {
   return source.then(
-    function () {
+    function onFulfilled() {
       return Promise.resolve('success');
     },
-    function () {
+    function onRejected() {
       return Promise.resolve('fail');
     }
   );
